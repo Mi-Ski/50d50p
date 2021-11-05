@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap");
+/* #region CSS Reset */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+/* #endregion */
+body {
+  background-color: #fdfdfd;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navigation {
+  height: 50px;
+  background-color: #333;
+  display: grid;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  color: #fdfdfd;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100vw;
+  height: 70vh;
+  padding-top: 3rem;
+}
+
+.container__relative {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container__graphics {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../svg/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("../svg/untitled.svg");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  animation: spin 30s linear;
+}
+
+.container__logo {
+  background-image: url("../svg/logo.svg");
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container__text {
+  margin-top: 3rem;
+}
+
+.container__text--header {
+  font-weight: 600;
+  font-size: 45px;
+  margin-bottom: 1.5rem;
+}
+
+.container__text--paragraphs {
+  text-align: center;
+  color: #555;
+  font-size: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #2a7de8;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 3.5rem;
+  font-size: 17px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#logo {
+  fill: black;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

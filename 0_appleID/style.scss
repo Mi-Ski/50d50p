@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+
+/* #region CSS Reset */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+	all: unset;
+	display: revert;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+ol,
+ul {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+}
+table {
+	border-collapse: collapse;
+}
+textarea {
+	white-space: revert;
+}
+/* #endregion */
+
+body {
+	background-color: #fdfdfd;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.navigation {
+	height: 50px;
+	background-color: #333;
+	display: grid;
+	align-items: center;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		color: #fdfdfd;
+	}
+}
+
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 70vh;
+	padding-top: 3rem;
+
+	&__relative {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__graphics {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+
+		background-image: url('../svg/bg.png');
+		background-position: center;
+		background-repeat: no-repeat;
+
+		mask-image: url('../svg/untitled.svg');
+		mask-position: center;
+		mask-repeat: no-repeat;
+
+		animation: spin 30s linear;
+	}
+
+	&__logo {
+		background-image: url('../svg/logo.svg');
+		width: 70px;
+		height: 70px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__text {
+		margin-top: 3rem;
+		&--header {
+			font-weight: 600;
+			font-size: 45px;
+			margin-bottom: 1.5rem;
+		}
+
+		&--paragraphs {
+			text-align: center;
+			color: #555;
+			font-size: 20px;
+		}
+	}
+}
+
+.button {
+	display: inline-block;
+	background-color: #2a7de8;
+	color: white;
+	border-radius: 20px;
+	padding: 0.5rem 1rem;
+	margin-top: 3.5rem;
+	font-size: 17px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+#logo {
+	// width: 100%;
+	// height: 100%;
+	fill: black;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
