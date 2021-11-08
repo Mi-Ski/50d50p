@@ -18,24 +18,46 @@
 	<body>
 		<nav class="navigation">
 			<ul class="navigation__list">
-				<li class="navigation__list--apple"></li>
-				<li>Store</li>
+				<li>
+					<svg class="navigation__list--icon">
+						<use xlink:href="svg/logo-icon.svg#icon"></use>
+					</svg>
+				</li>
+				<li>Sklep</li>
 				<li>Mac</li>
 				<li>iPad</li>
 				<li>iPhone</li>
 				<li>Watch</li>
 				<li>TV</li>
 				<li>Music</li>
-				<li>Support</li>
-				<li class="navigation__list--search"></li>
-				<li class="navigation__list--shop"></li>
+				<li>Wsparcie</li>
+				<li>
+					<svg class="navigation__list--icon navigation__list--icon-stroke">
+						<use xlink:href="svg/logo-icon.svg#search"></use>
+					</svg>
+				</li>
+				<li>
+					<svg class="navigation__list--icon navigation__list--icon-stroke">
+						<use xlink:href="svg/logo-icon.svg#shop"></use>
+					</svg>
+				</li>
 			</ul>
 		</nav>
+
+		<div class="subnav">
+			<div class="left">Apple ID</div>
+			<div class="right">
+				<ul>
+					<li>Zaloguj się</li>
+					<li>Utwórz Apple ID</li>
+					<li>Często zadawane pytania</li>
+				</ul>
+			</div>
+		</div>
+
 		<section class="container">
 			<!-- MAIN -->
 			<div class="container__relative">
-				<div class="container__graphics"></div>
-				<div class="container__graphics"></div>
 				<div class="container__graphics"></div>
 				<div class="container__logo"></div>
 			</div>
@@ -43,19 +65,34 @@
 			<!-- TEXT -->
 			<div class="container__text">
 				<h1 class="container__text--header">
-					One account for everything Apple
+					Jedno konto do wszystkich usług Apple
 				</h1>
 				<div class="container__text--paragraphs">
 					<p class="container__text--paragraph">
-						A single Apple ID and password gives you access to all Apple
-						services.
+						Jeden Apple ID i hasło zapewniają dostęp do wszystkich usług Apple.
 					</p>
 					<p class="container__text--paragraph">
-						Sign in to manage your account.
+						Zaloguj się, aby zarządzać kontem.
 					</p>
 				</div>
 			</div>
-			<a class="button" href="#"> Sign In </a>
+			<a class="button" href="#">Zaloguj się</a>
 		</section>
+
+		<main class="content-box">
+			<div class="box box-control"></div>
+			<div class="box box-privacy"></div>
+		</main>
+
+		<footer class="footer">
+			<div class="left">
+				<p class="merch"></p>
+				<p class="copy"></p>
+				<div class="footer-misc-nav">
+					
+				</div>
+			</div>
+			<div class="right">Polska</div>
+		</footer>
 	</body>
 </html>
