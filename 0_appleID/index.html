@@ -9,9 +9,7 @@
 		<script defer src="index.js"></script>
 	</head>
 
-	<!-- TODO gradient bg no alpha,
-	TODO  split mask svg, separate animations
-	TODO 	navigation icons
+	<!-- TODO  split mask svg, separate animations
 	TODO 	control/security bottom sections
 	? login sub-navbar ? -->
 
@@ -45,9 +43,9 @@
 		</nav>
 
 		<div class="subnav">
-			<div class="left">Apple ID</div>
-			<div class="right">
-				<ul>
+			<div class="subnav__content">
+				<div class="left">Apple ID</div>
+				<ul class="right">
 					<li>Zaloguj się</li>
 					<li>Utwórz Apple ID</li>
 					<li>Często zadawane pytania</li>
@@ -58,8 +56,20 @@
 		<section class="container">
 			<!-- MAIN -->
 			<div class="container__relative">
-				<div class="container__graphics"></div>
 				<div class="container__logo"></div>
+
+				<div class="absolute mask-1">
+					<div class="img" id="afterbegin"></div>
+				</div>
+				<div class="absolute mask-2">
+					<div class="img" id="afterbegin"></div>
+				</div>
+				<div class="absolute mask-3">
+					<div class="img" id="afterbegin"></div>
+				</div>
+				<div class="absolute mask-4">
+					<div class="img" id="afterbegin"></div>
+				</div>
 			</div>
 
 			<!-- TEXT -->
@@ -88,9 +98,7 @@
 			<div class="left">
 				<p class="merch"></p>
 				<p class="copy"></p>
-				<div class="footer-misc-nav">
-					
-				</div>
+				<div class="footer-misc-nav"></div>
 			</div>
 			<div class="right">Polska</div>
 		</footer>
